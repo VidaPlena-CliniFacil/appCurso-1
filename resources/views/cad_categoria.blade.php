@@ -19,14 +19,19 @@
                 <div class="card-style mb-30 ">
                   <h6 class="mb-25 fs-4" >Digite o nome da categoria de curso</h6>
                   <div class="input-style-1 fs-4 ">
+
+                    <form action="{{route('cadastro-categoria')}}" method="post">
+                      @csrf
                     <label class="fs-4">Categoria</label>
                     
-                      <input type="text" placeholder="Programação" />
+                      <input type="text" name="nomecategoria" placeholder="Insira Aqui..." />
                     
                   </div>
                   <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-3">Salvar</button>
                   </div>
+                </form>
+
                 </div>
 
               </div>
