@@ -113,7 +113,7 @@
           </a>
           <ul id="ddmenu_Aula" class="collapse dropdown-nav">
             <li>
-              <a href="settings.html"> <span class="text h4">Cadastrar</span> </a>
+              <a href="{{route('form-cadastro-aula')}}"> <span class="text h4">Cadastrar</span> </a>
             </li>
             <li>
               <a href="blank-page.html"><span class="text h4"> Gerenciar</span> </a>
