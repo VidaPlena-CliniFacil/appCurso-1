@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Categoria;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Validation\Validator;
+use App\Models\Categoria;
 
 class CategoriaController extends Controller
 {
@@ -34,15 +34,4 @@ class CategoriaController extends Controller
         return Redirect::route('index');
     }
 
-    public function cadastroCurso(Request $request){
-        $registrosCurso = $request->validate([
-        'nomecurso' => 'string|required',
-        'cargahoraria'=> 'string|required',
-        'valor'=> 'string|required',
-        ]);
-
-        Categoria::create($registrosCurso);
-
-        return Redirect::route('index');
-    }
 }

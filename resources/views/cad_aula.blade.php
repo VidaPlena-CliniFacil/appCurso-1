@@ -9,39 +9,34 @@
      <div class="col">
          <div class="card-style settings-card-2 mb-30">
              <div class="title mb-30">
-                 <h6>Cursos</h6>
+                 <h6>Aulas</h6>
              </div>
-             <form method="post" action="{{route('cadastro-curso')}}">
+             <form method="post" action="{{route('cadastro-aula')}}">
                 @csrf
                  <div class="row">
 
-                 <div class="input-style-1">
-                             <label>Id Categoria</label>
-                             <input type="text" name="idcategoria" placeholder="Id categoria..." />
-                         </div>
-
                      <div class="col-12">
                         <div class="input-style-1">
-                             <label>Nome</label>
-                             <input type="text" name="nomecurso" placeholder="Nome do curso..." />
+                             <label>Id curso</label>
+                             <input type="text" name="idcurso" placeholder="Id curso..." />
                          </div>
                      </div>
                      <div class="col-12">
                          <div class="input-style-1">
-                             <label>Carga Horária</label>
-                             <input type="text" name="cargahoraria" placeholder="Carga Horária..." />
+                             <label>Nome da aula</label>
+                             <input type="text" name="tituloaula" placeholder="Nome da aula..." />
                          </div>
                      </div>
                      <div class="col-12">
                          <div class="input-style-1">
-                             <label>Valor</label>
-                             <input type="text" name="valor" placeholder="Valor a ser pago..." />
+                             <label>urlaula</label>
+                             <input type="text" name="urlaula" placeholder="urlaula??..." />
                          </div>
                      </div>
                      
                      <div class="col-12">
                          <button class="main-btn primary-btn btn-hover">
-                             Adicionar Curso
+                             Adicionar Aula
                          </button>
                      </div>
                  </div>
