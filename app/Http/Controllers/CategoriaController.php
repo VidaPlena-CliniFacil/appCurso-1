@@ -13,6 +13,10 @@ class CategoriaController extends Controller
     public function mostrarFormCat(){
         return view('cad_categoria');
     }
+    public function mostrarManipulaCategoria(){
+        $registrosCategoria = Categoria::All();
+        return view('manipula_categoria',['registrosCategoria' => $registrosCategoria]);
+    }
     public function index(){
         return view('index');
     }
