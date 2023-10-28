@@ -8,7 +8,7 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <div class="title d-flex align-items-center flex-wrap">
-            <h2 class="mr-40">Gerenciamento da Categoria</h2>
+            <h2 class="mr-40">Gerenciamento das Categorias</h2>
           </div>
         </div>
         <!-- Invoice Wrapper Start -->
@@ -65,7 +65,7 @@
                           </td>
 
                           <td>
-                            <form method="Post" Action="{{route('alterar-categoria',$registrosCategorias->id)}}">
+                            <form method="Post" Action="{{route('deletar-categoria',$registrosCategorias->id)}}">
                               @method('delete')
                               @csrf
 

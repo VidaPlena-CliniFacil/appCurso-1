@@ -8,7 +8,7 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <div class="title d-flex align-items-center flex-wrap">
-            <h2 class="mr-40">Gerenciamento da Categoria</h2>
+            <h2 class="mr-40">Gerenciamento das Aulas</h2>
           </div>
         </div>
         <!-- Invoice Wrapper Start -->
@@ -17,7 +17,7 @@
             <div class="col-10 ">
               <div class="invoice-card card-style mb-30">
                 <div class="card-style mb-30 ">
-                  <h6 class="mb-25 fs-4">Digite o nome da categoria de curso</h6>
+                  <h6 class="mb-25 fs-4">Digite o nome da aula do curso</h6>
 
                   <section class="container m-5">
 
@@ -26,7 +26,7 @@
                         <div class="row">
 
                           <div class="col-6">
-                            <input type="text" id="categoria" name="categoria" class="form-control" placeholder="Digite a Categoria" aria-label="First name">
+                            <input type="text" id="categoria" name="categoria" class="form-control" placeholder="Digite o nome da aula" aria-label="First name">
                           </div>
 
                           <div class="col-6">
@@ -67,7 +67,7 @@
                           </td>
 
                           <td>
-                            <form method="Post" Action="{{route('alterar-aula',$registrosAulas->id)}}">
+                            <form method="Post" Action="{{route('deletar-aula',$registrosAulas->id)}}">
                               @method('delete')
                               @csrf
 
