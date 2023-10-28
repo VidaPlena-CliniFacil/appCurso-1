@@ -27,6 +27,23 @@ class CategoriaController extends Controller
         return view('cad_aula');
     }
 
+    public function DeletarCategoria(Categoria $registrosCategoria){
+        $registrosCategoria->delete();
+        return Redirect::route('manipula-categoria'); 
+    }
+
+    public function BuscarCategoriaNome(Request $request){
+
+        $registrosCategoria= Categoria::query();
+        $registrosCategoria->when($request->categoria,function($query,$valor)
+        {
+            $query->where('categoria','like','%',$valor,'%');
+        });
+
+        $registrosCategoria = $registrosCategoria->get();
+        return view('manipula_categoria',['registrosCategoria' => $registrosCategoria]);
+
+    }
 
     public function cadastroCat(Request $request){
         $registrosCat = $request->validate([
